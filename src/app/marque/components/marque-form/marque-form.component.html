@@ -1,0 +1,34 @@
+<form [formGroup]="marqueForm" (ngSubmit)="onSubmit(marqueForm.value)">
+    <h2 mat-dialog-title>Formulaire Marque</h2>
+    <mat-dialog-content class="mat-typography">
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>nom</mat-label>
+                    <input matInput placeholder="Apple" type="text" formControlName="nom" required>
+                    <mat-icon matPrefix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+            </div>
+    
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>siegeSocial</mat-label>
+                    <input matInput placeholder="Cupertino" type="text" formControlName="siegeSocial" required>
+                    <mat-icon matPrefix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field appearance="fill">
+                  <mat-label>chiffreAffaire</mat-label>
+                  <input matInput placeholder="46530000000" type="text" formControlName="chiffreAffaire" required>
+                  <mat-icon matPrefix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+          </div>
+    </mat-dialog-content>
+    {{marqueForm.valid}}
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button mat-button type="submit" cdkFocusInitial [disabled]="!marqueForm.valid">{{formAction}}</button>
+    </mat-dialog-actions>
+    
+    </form>
+  

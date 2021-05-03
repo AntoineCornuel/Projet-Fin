@@ -1,0 +1,74 @@
+<form [formGroup]="produitForm" (ngSubmit)="onSubmit(produitForm.value)">
+  <h2 mat-dialog-title>Produit FORM</h2>
+  <mat-dialog-content class="mat-typography">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>nom</mat-label>
+        <input
+          matInput
+          placeholder="iPhone 11"
+          type="text"
+          formControlName="nom"
+          required
+        />
+        <!-- <mat-icon matPrefix>sentiment_very_satisfied</mat-icon> -->
+      </mat-form-field>
+    </div>
+
+    <div class="test">
+      <mat-form-field appearance="fill">
+        <mat-label>capacite</mat-label>
+        <input
+          matInput
+          placeholder="128 GO"
+          type="text"
+          formControlName="capacite"
+          required
+        />
+        <!--<mat-icon matPrefix>sentiment_very_satisfied</mat-icon>-->
+ 
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>couleur</mat-label>
+        <input
+          matInput
+          placeholder="noir"
+          type="text"
+          formControlName="couleur"
+          required
+        />
+        <!-- <mat-icon matPrefix>sentiment_very_satisfied</mat-icon> -->
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre d'objectif</mat-label>
+        <input
+          matInput
+          placeholder="2"
+          type="text"
+          formControlName="nombreObjectif"
+          required
+        />
+        <!-- <mat-icon matPrefix>sentiment_very_satisfied</mat-icon> -->
+      </mat-form-field>
+    </div>
+
+  </mat-dialog-content>
+  {{ produitForm.valid }}
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button
+      mat-button
+      type="submit"
+      cdkFocusInitial
+      [disabled]="!produitForm.valid"
+    >
+      {{ formAction }}
+    </button>
+  </mat-dialog-actions>
+</form>
