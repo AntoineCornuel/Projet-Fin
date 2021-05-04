@@ -14,7 +14,7 @@ import { ProduitFormData } from 'src/app/core/models/produit-form-data';
 export class ProduitListComponent implements OnInit {
 
   produits$ : Observable<Produit[]>;
-  displayedColumns: string[] = ["id", "nom", "capacite", "update", "delete"];
+  displayedColumns: string[] = ["id", "nom", "capacite","couleur", "update", "delete"];
 
   constructor(private _produitService: ProduitService, public dialog: MatDialog) { }
 

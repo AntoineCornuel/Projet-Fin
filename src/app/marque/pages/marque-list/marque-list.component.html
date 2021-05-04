@@ -63,9 +63,8 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
   
-  <button mat-fab color="warn" (click)="openDialog(false, undefined)">
-    <mat-icon>add</mat-icon>
-  </button>
+  <button (click)="openDialog(false, undefined)" class="monbouton">
+  Ajouter une nouvelle marque  </button>
   
   <br>
   

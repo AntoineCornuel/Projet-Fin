@@ -1,4 +1,40 @@
 table{
     width: 100%;
-    background-color: rgb(153, 6, 6);
+    background-color: blue;
+}
+.monbouton{
+    float:right;
+    margin:25px;
+    margin-right:5%;
+    padding:10px;
+    border-radius:10px;
+    border-color:FFB233;
+    background-color:#FA8072;
+    color:#0CBAE1;
+}
+.test{
+    background-color:white;
+}
+th.mat-header-cell {
+    text-align: left;
+    background-color: #FA8072;
+    font-size:23px;
+    color:FFB233;
+    font-family:Courier New, monospace;
+    text-align:center;
+    font-size:23px;
+}
+td.mat-cell.cdk-cell.cdk-column-id.mat-column-id {
+    background-color: #FA8072;
+    color:FFB233;
+    font-family:Courier New, monospace;
+    text-align:center;
+
+}
+table.mat-table.cdk-table.mat-elevation-z8 {
+    width: 90%;
+    margin:auto;
+    text-align:center;
+    font-size:19px;
+    background-color:#0CBAE1;
 }
